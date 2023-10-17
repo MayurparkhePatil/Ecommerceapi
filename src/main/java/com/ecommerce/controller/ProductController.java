@@ -23,6 +23,7 @@ public class ProductController {
 	/// Get product by id
 	@GetMapping("/getproduct/{id}")
 	public ResponseEntity<Product> getProductById(@PathVariable int id) {
+                                           
 		Product product = ps.getProductById(id);
 		if (product != null) {
 			return new ResponseEntity<Product>(product, HttpStatus.FOUND);
